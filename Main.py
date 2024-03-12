@@ -1,17 +1,13 @@
-class Animals:
-    def breathe(self):
-        print('breathe')
-    def move(self):
-        print('move')
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-class Dogs(Animals):
-    pass
 
-class cats(Animals):
-    pass
-
-my_dog = Dogs()
-my_dog.breathe()
+    def print_info(self):
+        print(f"student name : {self.name}, age:{self.age}")
 
 
 
+student1 = Student('g',20)
+student1.print_info()
