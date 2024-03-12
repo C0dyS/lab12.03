@@ -55,7 +55,10 @@ class Bank_account:
     def deposit(self,amount):
         self.balance += amount
     def withdraw(self,amount):
-        self.balance -= amount
+        if self.balance - amount < 0:
+            print('not enough $ to withdraw')
+        else:
+            self.balance -= amount
     def check_info(self):
         print(f'{self.owner} = {self.balance}')
 
@@ -64,3 +67,6 @@ check1.deposit(100)
 check1.check_info()
 check1.withdraw(90)
 check1.check_info()
+check2 = Bank_account(1,"alex")
+check2.withdraw(2)
+
