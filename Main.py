@@ -35,3 +35,32 @@ book1 = Book('a','b','c')
 book1.display_info()
 
 
+class Car:
+    def __init__(self,brand,model,year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def start_engine(self):
+        return print('engine STARTED')
+
+car1 = Car('a','b',1990)
+car1.start_engine()
+
+class Bank_account:
+    def __init__(self,balance,owner):
+        self.balance = balance
+        self.owner = owner
+
+    def deposit(self,amount):
+        self.balance += amount
+    def withdraw(self,amount):
+        self.balance -= amount
+    def check_info(self):
+        print(f'{self.owner} = {self.balance}')
+
+check1 = Bank_account(1000,"alex")
+check1.deposit(100)
+check1.check_info()
+check1.withdraw(90)
+check1.check_info()
